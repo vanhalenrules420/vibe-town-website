@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #5c94fc; /* Earthbound-inspired blue */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #5c94fc 0%, #ff6b97 100%);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 4px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffcc3c; /* Earthbound yellow */
+    text-shadow: 4px 4px 0px #ff6b97; /* Pink shadow for contrast */
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+#rotating-text {
+    color: #7bf7af; /* Earthbound mint green */
+    display: inline-block;
+    position: relative;
+}
+
+#rotating-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #7bf7af;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.contact {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.email {
+    color: #ffcc3c; /* Earthbound yellow */
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .contact {
+        font-size: 0.9rem;
+    }
+}

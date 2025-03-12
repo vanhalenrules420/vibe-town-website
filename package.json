@@ -1,0 +1,12 @@
+{
+  "name": "vibe-town",
+  "version": "1.0.0",
+  "description": "Vibe Town Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
