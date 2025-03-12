@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Vibe Town</title>
     <!-- Preload the font to avoid FOUT (Flash of Unstyled Text) -->
     <link rel="preload" href="https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        html {
+            height: -webkit-fill-available;
         }
         
         body {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             font-family: 'Press Start 2P', cursive;
             background: linear-gradient(135deg, #5c94fc 0%, #ff6b97 100%);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             text-align: center;
-            padding: 1rem;
-            overflow-x: hidden;
         }
         
         .container {
@@ -34,6 +34,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             border: 4px solid white;
             border-radius: 8px;
+            margin: 1rem;
         }
         
         .logo {
@@ -113,6 +114,10 @@
     </div>
     
     <script>
+        // Lock scrolling on mobile
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        
         window.onload = function() {
             const rotatingText = document.getElementById('rotating-text');
             const groups = [
