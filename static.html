@@ -70,6 +70,11 @@
             color: #ffcc3c;
             margin-top: 0.5rem;
         }
+        
+        .launch-date {
+            color: #7bf7af;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -79,6 +84,7 @@
             Vibe Town will be the home for <span id="rotating-text">Builders</span>
         </div>
         <div class="contact">
+            <p class="launch-date">Public launch: June 2025</p>
             <p>Get in touch</p>
             <p class="email">hey@vibetown.fun</p>
         </div>
@@ -88,10 +94,9 @@
         window.onload = function() {
             const rotatingText = document.getElementById('rotating-text');
             const groups = [
+                'Communities',
                 'Builders',
-                'Vibe coders',
                 'Creatives',
-                'Online communities',
                 'Your friends',
                 'You'
             ];
